@@ -1,3 +1,7 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
 from assisipy import casu
 import time
 
@@ -51,8 +55,7 @@ if __name__ == '__main__':
             clr = (args.right_temp -MIN_TEMP) / (MAX_TEMP - MIN_TEMP)
             c.set_diagnostic_led_rgb(clr, 0, 0)
 
-        #print "[I] set temp to 48", c.get_peltier_setpoint()
-        while time.time() - start < args.runtime:
+        while (args.runtime == 0) or (time.time() - start < args.runtime):
             i += 1
             time.sleep(0.25)
             if i % 20 == 0:

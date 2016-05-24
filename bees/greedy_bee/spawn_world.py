@@ -14,7 +14,7 @@ if __name__ == '__main__':
     Create a circular wall with some casus outside of the wall,
     and spawn bees
     ''')
-    parser.add_argument('-n', '--num-bees', type=int, default=0)
+    parser.add_argument('-b', '--num-bees', type=int, default=0)
     parser.add_argument('-c', '--num-casus', type=int, default=3)
     parser.add_argument('-r', '--radius', type=float, default=12)
     args = parser.parse_args()
