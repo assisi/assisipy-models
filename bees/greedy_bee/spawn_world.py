@@ -23,10 +23,7 @@ if __name__ == '__main__':
 
     if args.num_bees > 0:
         for i in range(1, args.num_bees+1):
-            if i < 10:
-                name = 'Bee-00{0}'.format(i)
-            else:
-                name = 'Bee-0{0}'.format(i)
+            name = 'Bee-{:03d}'.format(i)
 
             pose = (random.uniform(-4, 4), random.uniform(-4, 4),
                     2*pi*random.random())
